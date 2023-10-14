@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.links {
+    display: flex;
+    justify-content: end;
+    margin-right: 200pt;
+    width: auto;
+}
+
+a {
+    margin-left: 30pt;
+    margin-top: 40pt;
+}
+
+.plate {
+    margin-left: 30pt;
+    margin-right: 30pt;
+    margin-bottom: 30pt;
+    display: flex;  
+    justify-content: center;
+    height: 600pt;
+}
+
+.container {
+    width: 400pt;
+}
+
+.fg {
+    width: 320pt;
+}
+
+h2 {
+    margin-top: 20pt;
+    font-size: 30pt;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.d {
+    margin-left: 20pt;
+    margin-top: 20pt;
+}
+
+.des {
+    margin-top: 20pt;
+}
+
+.rd {
+    width: 100pt;
+    height: 17pt;
+    margin-right: 110pt;
+}
+
+label {
+    margin-top: 20pt;
+    font-weight: 700;
+}
+
+input {
+    margin-left: 10pt;
+    margin-top: 20pt;
+    width: 150pt;
+    height: 17pt;
+}
+
+.btn {
+    margin-left: 270pt;
+    padding: 3pt;
+    box-shadow: 2px 3px black;
+    background-color: burlywood;
+    width: 50pt;
+}
+
+.t, .n {
+    margin-right: 60pt;
+}
+
+.flash {
+    color: red;
+}

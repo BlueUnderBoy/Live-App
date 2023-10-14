@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.username {
+    margin: 20pt;
+}
+
+.plate {
+    display: flex;
+    justify-content: center;
+}
+
+.links {
+    margin-top: 20pt;
+    margin-left: 530pt;
+    display: flex;
+    justify-content: space-between;
+}
+
+.af {
+    margin-right: 20pt;
+}
+
+
+
+table, td{
+    border-color: black;
+    padding: 7pt;   
+    text-align: center;
+}
+
+.r {
+    width: 155pt;
+}
+
+tr {
+    border-top-style: hidden;
+}
+
+th {
+    border-style: groove;
+    border-color: black;
+    border: 3px solid;
+    background-color: burlywood;
+    font-size: 20pt;
+}
+
+tr:nth-child(even) {
+background-color:whitesmoke;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+.t {
+    font-weight: 700;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 15pt;
+}
+
+.like {
+    display: flex;
+    justify-self: center;
+}
+
+img {
+    height: 20px;
+    margin-top: 3pt;
+    margin-left: 11pt;
+    border-radius: 50%;
+}

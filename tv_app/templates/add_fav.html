@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/af.css">
+</head>
+<body>
+    <div class="links">
+        <a href="/dashboard"><h3>TV Shows</h3></a>
+        <a href="/logout"><h3>Logout</h3></a>
+    </div>
+    <div class="plate">
+        <div class="container">
+            <div>
+                <h1>Add Your Favorite Show!</h1>
+            </div>
+            <div class="fg">
+                <form action="/addshow" method="POST">
+                    {% with messages = get_flashed_messages(category_filter=['create']) %}
+                    {% if messages %}
+                        {% for message in messages %}
+                        <p class="flash">{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input class="t" type="text" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="network">Network:</label>
+                        <input class="n" type="text" name="network">
+                    </div>
+                    <div class="form-group">
+                        <label for="reldate">Release Date:</label>
+                        <input class="rd" type="date" name="reldate">
+                    </div>
+                    <div class="form-group">
+                        <div class="des">
+                            <label for="description">Description:</label>
+                        </div>
+                        <div>
+                            <textarea class="d" rows = "4" cols = "40" name="description">My favorite show!</textarea>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary nt-3" value="Add">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

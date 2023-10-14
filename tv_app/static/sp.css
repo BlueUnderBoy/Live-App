@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.plate {
+    display: flex;
+    justify-content: center;
+    margin-top: 100pt;
+}
+
+.box {
+    padding-top: 10pt;
+    padding-bottom: 10pt;
+    border: 3px solid;
+    width: 600pt;
+}
+
+.links {
+    display: flex;
+    justify-content: end;
+}
+
+h3 {
+    margin-left: 40pt;
+}
+
+.d {
+    width: 300pt;
+}
+
+h1 {
+    margin-bottom: 30pt;
+    margin-left: 10pt;
+    color: blue;
+}
+
+p {
+    margin-left: 10pt;
+    margin-bottom: 5pt;
+    font-weight: 700;
+}
+
+.a {
+    margin-top: 30pt;
+}

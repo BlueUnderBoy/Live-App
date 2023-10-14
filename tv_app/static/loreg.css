@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40pt;
+    font-size: 50pt;
+    color:coral;
+}
+
+h2 {
+    margin-top: 20pt;
+    font-size: 30pt;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    margin-top: 20pt;
+    font-weight: 700;
+}
+
+input {
+    margin-left: 10pt;
+    margin-top: 20pt;
+}
+
+.btn {
+    margin-left: 200pt;
+    padding: 3pt;
+    box-shadow: 2px 3px black;
+    background-color: burlywood;
+}

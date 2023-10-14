@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/ef.css">
+</head>
+<body>
+    <div class=>
+        <div class="links">
+            <a href="/dashboard"><h3>TV Shows</h3></a>
+            <a href="/logout"><h3>Logout</h3></a>
+        </div>
+    </div>
+    <div class="plate">
+        <div class="container"> 
+            <div>
+                <h1>Edit Show</h1>
+            </div>
+            <div>
+                {% with messages = get_flashed_messages(category_filter=['create']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="flash">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+            <form action="/shows/edit" method="POST">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input class="t" type="text" name="title" value="{{show.title}}">
+                </div>
+                <div class="form-group">
+                    <label for="network">Network:</label>
+                    <input class="n" type="text" name="network" value="{{show.network}}">
+                </div>
+                <div class="form-group">
+                    <label for="reldate">Release Date:</label>
+                    <input class="rd" type="date" name="reldate" value={{sy}} > 
+                </div>
+                <div class="form-group">
+                    <div>
+                        <label for="description">Description:</label>
+                    </div>
+                    <div>
+                        <textarea class="des" rows = "4" cols = "47" name="description">{{sd}}</textarea>
+                    </div>
+                </div>
+                <input class="btn" type="submit" value="Update">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/up.css">
+</head>
+<body>
+    <div class="username">
+        <h1>Welcome {{user.first_name}}</h1>
+    </div>
+    <div class="plate">
+        <div class="container">
+            <div class="links">
+                <a class='af' href="/create_show"><h3>Add Favorite</h3></a>
+                <a class="lg" href="/logout"><h3>Logout</h3></a>
+            </div>
+            <div class="fav_shows">
+                <h1>All TV Shows</h1>
+            </div>
+            <table border="0">
+                <div class="head">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Network</th>
+                            <th>Release Date</th>
+                            <th>Actions</th>
+                            <th>Likes</th>
+                        </tr>
+                    </thead>
+                </div>
+                <tbody class="body">
+                    {% if mshows|length + oshows|length == 0: %}
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    {% else: %}
+                        {% for one_show in mshows: %}
+                            <tr>
+                                <td class="t">{{one_show.title}}</td>
+                                <td>{{one_show.network}}</td>
+                                <td class="r">{{one_show.reldate}}</td>
+                                <td>
+                                    <a href="/shows/{{one_show.show_id}}">Show | </a>
+                                    <a href="/shows/update/{{one_show.show_id}}">Edit | </a>
+                                    <a href="/shows/delete/{{one_show.show_id}}">Delete</a>
+                                </td>
+                                <td>
+                                    {{one_show.likes}} <a class='like' href="/like/{{one_show.show_id}}"><img src="static/like.jpg" alt="like" class="lp"></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        {% for one_show in oshows: %}
+                            <tr>
+                                <td class="t">{{one_show.title}}</td>
+                                <td>{{one_show.network}}</td>
+                                <td class="r">{{one_show.reldate}}</td>
+                                <td>
+                                    <a href="/shows/{{one_show.show_id}}">Show</a>
+                                </td>
+                                <td>
+                                    {{one_show.likes}} <a class='like' href="/like/{{one_show.show_id}}"><img src="static/like.jpg" alt="like" class="lp"></a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

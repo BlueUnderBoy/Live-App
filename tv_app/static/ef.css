@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.flash {
+    color: red;
+}
+
+.links {
+    display: flex;
+    justify-content: end;
+    margin-right: 250pt;
+}
+
+a {
+    margin-left: 20pt;
+    margin-top: 40pt;
+}
+
+.plate {
+    width: 1050pt;
+    margin-left: 30pt;
+    margin-right: 30pt;
+    height: 700pt;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 350pt;
+}
+
+h1 {
+    margin-bottom: 20pt;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20pt;
+}
+
+input {
+    height: 17pt;
+    width: 200pt;
+}
+
+.t, .n {
+    margin-right: 50pt;
+}
+
+.rd {
+    width: 90pt;
+    margin-right: 160pt;
+}
+
+.des {
+    margin-left: 10pt;
+}
+
+.btn {
+    margin-left: 310pt;
+    width: 40pt;
+    box-shadow: 3pt 3pt;
+    background-color: burlywood;
+}
+
+label {
+    font-weight: 700;
+}

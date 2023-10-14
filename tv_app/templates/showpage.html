@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/sp.css">
+</head>
+<body>
+    <div class="plate">
+        <div class="container">
+            <div class="links">
+                <a href="/dashboard"><h3>TV Shows</h3></a>
+                <a href="/logout"><h3>Logout</h3></a>
+            </div>
+            <div class="box">
+                <div>
+                    <h1>{{show.title}}</h1>
+                </div>
+                <div>
+                    <p>Network: {{show.network}}</p>
+                    <p>Release Date: {{show.reldate}}</p>
+                    <p class="d">Description: {{show.description}}</p>
+                </div>
+                <div>
+                    <p class="a">Posted By: {{user.first_name}} {{user.last_name}}</p>
+                </div>
+                {% if show.likes | int > 0 %}
+                    {% set z = followers | length %}
+                    <div>
+                        <p>Liked By: {% for x in range(0, z) %}
+                                        {% if x == (z-1) %}
+                                            {{followers[x].first_name}} {{followers[x].last_name}}
+                                        {% else %}
+                                            {{followers[x].first_name}} {{followers[x].last_name}},
+                                        {% endif %}
+                                {% endfor %}
+                        </p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

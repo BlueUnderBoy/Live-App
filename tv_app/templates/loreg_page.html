@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/loreg.css">
+</head>
+<body>
+    <div class="title">
+        <h1>JEX</h1>
+    </div>
+    <div class="container">
+        <div class="register">
+            <h2>Register</h2>
+            <form action="/create_user" method="POST">
+                {% with messages = get_flashed_messages(category_filter=['register']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="red_text">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name">
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" name="last_name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="text" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm">Confirm Password:</label>
+                    <input type="text" name="confirm">
+                </div>
+                <input class='btn' type="submit" value="Register">
+            </form>
+        </div>
+        <div class="login">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                {% with messages = get_flashed_messages(category_filter=['login']) %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <p class="red_text">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="text" name="password">
+                </div>
+                <input class='btn' type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
